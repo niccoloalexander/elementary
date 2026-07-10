@@ -15,7 +15,8 @@ class ReportLinkData(BaseModel):
 
 
 class ReportPath(Enum):
-    TEST_RUNS = "test-runs"
+    # test-runs/<id> cold-loads to the parent list, not the test (elementary-data/elementary#2283)
+    TEST_RUNS = "test-results"
     MODEL_RUNS = "model-runs"
 
 
